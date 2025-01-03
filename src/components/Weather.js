@@ -63,7 +63,7 @@ const Weather = () => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
             />
-            <div >
+            <div className="weather">
                 {weatherData ? (
                     <div className="weather">
                         <h2>Weather in {weatherData.name}</h2>
