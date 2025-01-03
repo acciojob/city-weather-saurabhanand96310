@@ -48,12 +48,12 @@ const Weather = () => {
                     setValue("")
                 } catch (error) {
                     console.error("Error fetching weather data:", error);
-                    setWeatherData(null); // Clear weather data on error
+                    setWeatherData(null); 
                 }
             };
             fetchWeather();
         }
-    }, [value]); // Run effect when 'value' changes
+    }, [value]); 
 
     return (
         <div className="main">
@@ -64,13 +64,14 @@ const Weather = () => {
                 onChange={(e) => setValue(e.target.value)}
             />
             <div className="weather">
+                <spam>.</spam>
+            </div>
+            <div className="weather">
                 {weatherData ? (
                     <div className="weather">
                         <h2>Weather in {weatherData.name}</h2>
                         <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}°C</p>
                         <p>Weather: {weatherData.weather[0].description}</p>
-                        <p>Humidity: {weatherData.main.humidity}%</p>
-                        <p>Wind Speed: {weatherData.wind.speed} m/s</p> 
                         <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt="cloud image"/>
                         
                     </div>
