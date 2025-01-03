@@ -63,9 +63,9 @@ const Weather = () => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
             />
-            <div className="weather">
+            <div >
                 {weatherData ? (
-                    <div >
+                    <div className="weather">
                         <h2>Weather in {weatherData.name}</h2>
                         <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}°C</p>
                         <p>Weather: {weatherData.weather[0].description}</p>
