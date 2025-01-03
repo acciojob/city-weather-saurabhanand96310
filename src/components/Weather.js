@@ -70,7 +70,9 @@ const Weather = () => {
                         <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}°C</p>
                         <p>Weather: {weatherData.weather[0].description}</p>
                         <p>Humidity: {weatherData.main.humidity}%</p>
-                        <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+                        <p>Wind Speed: {weatherData.wind.speed} m/s</p> 
+                        <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt="cloud image"/>
+                        
                     </div>
                 ) : (
                     value.trim() && <p>No weather data available. Please try again.</p>
