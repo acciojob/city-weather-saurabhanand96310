@@ -45,6 +45,7 @@ const Weather = () => {
                     );
                     console.log(response)
                     setWeatherData(response.data);
+                    setValue("")
                 } catch (error) {
                     console.error("Error fetching weather data:", error);
                     setWeatherData(null); // Clear weather data on error
