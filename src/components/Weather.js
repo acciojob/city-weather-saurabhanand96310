@@ -56,7 +56,7 @@ const Weather = () => {
     }, [value]); // Run effect when 'value' changes
 
     return (
-        <div>
+        <div className="main">
             <input
                 className="search"
                 placeholder="Enter city name"
@@ -65,7 +65,7 @@ const Weather = () => {
             />
             <div className="weather">
                 {weatherData ? (
-                    <div>
+                    <div >
                         <h2>Weather in {weatherData.name}</h2>
                         <p>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}°C</p>
                         <p>Weather: {weatherData.weather[0].description}</p>

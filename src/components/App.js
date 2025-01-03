@@ -5,7 +5,7 @@ import Weather from "./Weather";
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
         {/* Do not remove the main div */}
         <Weather/>
     </div>
