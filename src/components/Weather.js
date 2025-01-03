@@ -30,7 +30,7 @@ import "regenerator-runtime/runtime.js";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const API_KEY = "130573acc059bc64f8d3016e0b5f49fe";
+const API = "130573acc059bc64f8d3016e0b5f49fe";
 
 const Weather = () => {
     const [value, setValue] = useState(""); // City name input
@@ -41,7 +41,7 @@ const Weather = () => {
             const fetchWeather = async () => {
                 try {
                     const response = await axios.get(
-                        `https://api.openweathermap.org/data/2.5/weather?q={value}&appid={API key}`
+                        `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${API}`
                     );
                     console.log(response)
                     setWeatherData(response.data);
